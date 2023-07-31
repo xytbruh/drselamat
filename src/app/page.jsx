@@ -5,7 +5,7 @@ import Main from "./components/Main";
 import Header from "./components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
 import ReactGA from "react-ga";
-const TRACKING_ID = "G-GCJPPC7XPK"; // YOUR_OWN_TRACKING_ID
+const TRACKING_ID = "G-0KZ9ZNH0HC"; // YOUR_OWN_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
 export default function Home() {
