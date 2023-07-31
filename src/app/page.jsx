@@ -21,7 +21,6 @@ export default function Home() {
   };
   return (
     <>
-      <Analytics />
       <Header handleClick={handleClick} />
       <Main />
       <Footer />
