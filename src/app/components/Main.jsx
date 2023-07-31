@@ -2,7 +2,7 @@
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
 
 export default function Main() {
