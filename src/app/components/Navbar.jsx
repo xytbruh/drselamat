@@ -32,7 +32,7 @@ export default function Header() {
               <ul>
                 <li>
                   <Link href="https://www.facebook.com/people/Selamat/100051027789122/?mibextid=ZbWKwL">
-                    <FaFacebook className="" />
+                    <FaFacebook  />
                   </Link>
                 </li>
                 <li>
