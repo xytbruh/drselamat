@@ -71,6 +71,7 @@ export default function Main() {
                 src="/AHY-Ketum-Jas-PD-400x598-1.webp"
                 className="mx-auto img-fluid"
                 alt="dr selamat"
+                priority
                 width="400"
                 height="400"
               />
@@ -168,6 +169,7 @@ export default function Main() {
                 <Image
                   src="/AHY-Ketum-Jas-PD-400x598-1.webp"
                   width="400"
+                  priority
                   height="400"
                   className="mx-auto img-fluid"
                   alt="Profil"
