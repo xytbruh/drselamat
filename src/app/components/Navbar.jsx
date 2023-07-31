@@ -10,7 +10,6 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 export default function Header(props) {
-  console.log(props);
 
   return (
     <>

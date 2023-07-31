@@ -9,7 +9,7 @@ import ReactGA from "react-ga";
 export default function Home() {
   useEffect(() => {
     ReactGA.initialize("G-YSJMKB2MTT");
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.pageview("/");
   }, []);
 
   const handleClick = () => {
