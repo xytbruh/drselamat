@@ -6,15 +6,25 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 
 export default function Main() {
+  const [formData, setFormData] = useState({
+    nama: "",
+    no_telp: "",
+    umur: "",
+    alamat: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const form = event.target;
-
     axios
-      .post(
-        "https://api.apispreadsheets.com/data/uDbLtsVltJBSzNcU/",
-        new FormData(form)
-      )
+      .post("https://api.apispreadsheets.com/data/uDbLtsVltJBSzNcU/", formData)
       .then(() => {
         alert("Form Data Submitted :)");
       })
@@ -319,35 +329,35 @@ export default function Main() {
                         type="text"
                         className="form-control"
                         placeholder="Nama Anda?"
-                        name="nama"
-                        id=""
+                        value={formData.nama}
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col-6">
                       <input
                         type="number"
-                        name="no_telp"
+                        value={formData.no_telp}
+                        onChange={handleChange}
                         placeholder="No Telephone"
                         className="form-control"
-                        id=""
                       />
                     </div>
                     <div className="col-12">
                       <input
                         type="number"
-                        name="umur"
                         placeholder="Umur Anda?"
                         className="form-control"
-                        id=""
+                        value={formData.umur}
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col-12">
                       <input
                         type="text"
-                        name="alamat"
                         placeholder="Alamat"
                         className="form-control"
-                        id=""
+                        value={formData.alamat}
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col-12">
