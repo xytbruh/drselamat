@@ -2,6 +2,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/style.css";
 import { Inter } from "next/font/google";
 
+
+import ReactGA from 'react-ga';
+const TRACKING_ID = "G-GCJPPC7XPK"; // YOUR_OWN_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
