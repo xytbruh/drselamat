@@ -9,8 +9,9 @@ import {
   FaPhone,
   FaTiktok,
 } from "react-icons/fa";
-export default function Header() {
-  
+export default function Header(props) {
+  console.log(props);
+
   return (
     <>
       <header className="d-none d-lg-block">
@@ -33,7 +34,7 @@ export default function Header() {
               <ul>
                 <li>
                   <Link href="https://www.facebook.com/people/Selamat/100051027789122/?mibextid=ZbWKwL">
-                    <FaFacebook  />
+                    <FaFacebook />
                   </Link>
                 </li>
                 <li>
@@ -63,9 +64,15 @@ export default function Header() {
 
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="navbar-nav m-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#profil">Profil</Nav.Link>
-            <Nav.Link href="#kontak">Kontak</Nav.Link>
+            <Nav.Link href="#home" onClick={props.handleClick}>
+              Home
+            </Nav.Link>
+            <Nav.Link href="#profil" onClick={props.handleClick}>
+              Profil
+            </Nav.Link>
+            <Nav.Link href="#kontak" onClick={props.handleClick}>
+              Kontak
+            </Nav.Link>
           </Nav>
           <Link href="" className="tombol">
             Hubungi Kami
