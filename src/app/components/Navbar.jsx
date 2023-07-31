@@ -9,7 +9,10 @@ import {
   FaPhone,
   FaTiktok,
 } from "react-icons/fa";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker";
 export default function Header() {
+  const gaEventTracker = useAnalyticsEventTracker("Home");
+
   return (
     <>
       <header className="d-none d-lg-block">
@@ -62,9 +65,9 @@ export default function Header() {
 
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="navbar-nav m-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#profil">Profil</Nav.Link>
-            <Nav.Link href="#kontak">Kontak</Nav.Link>
+            <Nav.Link href="#home" onClick={()=>gaEventTracker('Home')}>Home</Nav.Link>
+            <Nav.Link href="#profil" onClick={()=>gaEventTracker('Profil')}>Profil</Nav.Link>
+            <Nav.Link href="#kontak" onClick={()=>gaEventTracker('Kontak')}>Kontak</Nav.Link>
           </Nav>
           <Link href="" className="tombol">
             Hubungi Kami
