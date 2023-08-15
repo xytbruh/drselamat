@@ -8,21 +8,13 @@ import ReactGA from "react-ga";
 
 export default function Home() {
   useEffect(() => {
-    ReactGA.initialize("G-YSJMKB2MTT");
-    ReactGA.pageview("/");
+    ReactGA.initialize("UA-273287875-1"); // Ganti dengan kode pelacakan Anda
+    ReactGA.pageview(window.location.pathname);
   }, []);
-
-  const handleClick = () => {
-    ReactGA.event({
-      category: "Navbar",
-      action: "Click",
-      label: "My Nav Click",
-    });
-  };
   return (
     <>
       <Analytics />
-      <Header handleClick={handleClick} />
+      <Header />
       <Main />
       <Footer />
     </>
