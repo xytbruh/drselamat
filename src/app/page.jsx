@@ -8,7 +8,7 @@ import ReactGA from "react-ga";
 
 export default function Home() {
   useEffect(() => {
-    ReactGA.initialize("UA-273287875-1"); // Ganti dengan kode pelacakan Anda
+    ReactGA.initialize("UA-281864708-1"); // Ganti dengan kode pelacakan Anda
     ReactGA.pageview(window.location.pathname);
   }, []);
   return (
